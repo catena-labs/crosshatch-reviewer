@@ -3,10 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "check": "biome check . && bun run type-check && bun test",
+    "clean": "git clean -xdf .next node_modules/.cache",
     "build": "next build",
+    "dev": "next dev --turbo",
+    "fix": "bun format && bun lint --fix",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "lint": "biome lint .",
+    "outdated": "bunx npm-check-updates --interactive --format group",
     "start": "next start",
-    "lint": "next lint"
+    "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
     "react": "19.0.0-rc.0",
@@ -14,11 +21,12 @@
     "next": "15.0.0-canary.75"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@biomejs/biome": "1.8.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5"
   }
 }
