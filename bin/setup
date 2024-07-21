@@ -1,0 +1,42 @@
+#!/usr/bin/env sh
+
+#
+# This file initializes the repository for local development and CI.
+#
+# This file should be run after cloning the repository for the first time, but
+# is safe to run multiple times.
+#
+
+# Adds a secret to the .env.local file unless the key is already defined. This
+# allows us to add new default values even if a `.env.local` file alrady exists
+define_secret() {
+  local secret_name=$1
+  local secret_value=$2
+
+  if ! grep -q "^${secret_name}=" .env.local; then
+    echo "  > Setting '${secret_name}' ..."
+    echo "${secret_name}=\"${secret_value}\"" >> .env.local
+  else
+    echo "  > '${secret_name}' already defined, skipping ..."
+  fi
+}
+
+#
+# Install dependencies
+#
+echo "✨ Installing dependencies ..."
+bun install --frozen-lockfile
+
+#
+# Create a .env.local file and popupate it with auto-generated secrets
+#
+echo "\n✨ Creating a .env.local file for local environment variables..."
+touch .env.local
+
+# Define .env.local secrets here
+# define_secret "AUTH_SECRET" "$(openssl rand -base64 32)"
+
+#
+# Done.
+#
+echo "\n🎉 All set. Happy coding!"

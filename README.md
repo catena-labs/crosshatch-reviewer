@@ -17,6 +17,12 @@
 git clone git@github.com:startkit-dev/next.git <your-project-name>
 ```
 
+Once cloned, you can run the setup script to get everything initialized:
+
+```sh
+bun run setup
+```
+
 ## Usage
 
 ```sh

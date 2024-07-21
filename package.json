@@ -12,6 +12,7 @@
     "format:check": "biome format .",
     "lint": "biome lint .",
     "outdated": "bunx npm-check-updates --interactive --format group",
+    "setup": "./bin/setup",
     "start": "next start",
     "type-check": "tsc --noEmit --pretty"
   },
