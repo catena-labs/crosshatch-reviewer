@@ -10,6 +10,7 @@
 - ✅ The latest **Next.js** (v15 rc)
 - ✅ **Bun** package manager and test runner
 - ✅ Insanely fast linting and code-style from **Biome**
+- ✅ Automatic CI with **Github Actions**
 
 ## Installation
 
