@@ -13,7 +13,7 @@
 - ✅ Automatic CI with **Github Actions**
 - ✅ Type-safe environment variables via **t3-env**
 - ✅ **Tailwind CSS** for utility-first CSS
-- ✅ Automatic **sitemap.xml** and **robots.txt** generation
+- ✅ Automatic **sitemap.xml**, **robots.txt**, and **manifest** generation
 
 ## Installation
 
