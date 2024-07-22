@@ -11,6 +11,7 @@
 - ✅ **Bun** package manager and test runner
 - ✅ Insanely fast linting and code-style from **Biome**
 - ✅ Automatic CI with **Github Actions**
+- ✅ Type-safe environment variables via **t3-env**
 
 ## Installation
 
