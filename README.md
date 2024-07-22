@@ -12,6 +12,7 @@
 - ✅ Insanely fast linting and code-style from **Biome**
 - ✅ Automatic CI with **Github Actions**
 - ✅ Type-safe environment variables via **t3-env**
+- ✅ **Tailwind CSS** for utility-first CSS
 
 ## Installation
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import localFont from "next/font/local"
 import "./globals.css"
+import { TailwindIndicator } from "@/components/layout/tailwind-indicator"
 import type { PropsWithChildren } from "react"
 
 const geistSans = localFont({
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
         className={`${geistSans.variable}${geistMono.variable} antialiased`}
       >
         {children}
+        <TailwindIndicator />
       </body>
     </html>
   )
