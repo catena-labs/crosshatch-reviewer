@@ -13,7 +13,7 @@ export function TailwindIndicator() {
     <div className="fixed bottom-5 left-2.5">
       <div className="bottom-2.5">
         <span
-          className="flex size-6 items-center justify-center rounded-full bg-white font-bold text-black text-xs"
+          className="flex size-6 items-center justify-center rounded-full bg-white font-bold font-mono text-black text-xs"
           style={{
             boxShadow:
               "0 11px 40px 0 rgba(0, 0, 0, 0.25), 0 2px 10px 0 rgba(0, 0, 0, 0.12)"

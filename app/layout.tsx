@@ -22,7 +22,7 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
           "font-sans antialiased"
         )}
       >
-        <ThemeProvider>
+        <ThemeProvider attribute="class">
           {children}
           <TailwindIndicator />
         </ThemeProvider>
