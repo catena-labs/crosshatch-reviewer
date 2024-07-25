@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { ThemeProvider } from "next-themes"
 import localFont from "next/font/local"
 import "./globals.css"
 import { TailwindIndicator } from "@/components/layout/tailwind-indicator"
@@ -22,12 +23,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
       <body
         className={`${geistSans.variable}${geistMono.variable} antialiased`}
       >
-        {children}
-        <TailwindIndicator />
+        <ThemeProvider>
+          {children}
+          <TailwindIndicator />
+        </ThemeProvider>
       </body>
     </html>
   )
