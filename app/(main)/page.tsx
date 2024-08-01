@@ -1,11 +1,10 @@
-import { Footer } from "@/components/layout/footer"
 import Image from "next/image"
-import logo from "./icon4.png"
+import logo from "../icon4.png"
 
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 sm:p-20">
-      <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
+    <main className="flex grow flex-col items-center justify-center">
+      <div className="container flex max-w-md flex-col items-center gap-8 sm:items-start">
         <div className="flex flex-row items-center gap-2">
           <Image
             className="hover:-rotate-12 aspect-square transition-all hover:scale-105 dark:invert"
@@ -52,9 +51,7 @@ export default function Home() {
             Read our docs
           </a>
         </div>
-      </main>
-
-      <Footer />
-    </div>
+      </div>
+    </main>
   )
 }
