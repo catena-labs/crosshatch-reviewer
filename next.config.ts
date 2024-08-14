@@ -4,6 +4,9 @@ import "./env/client"
 import "./env/server"
 
 const nextConfig: NextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true
+  },
   experimental: {
     mdxRs: true,
     turbo: {

@@ -6,16 +6,23 @@
     }
   },
   "files": {
-    "ignore": ["./.vscode/*.json", "./migrations/"]
+    "ignore": []
   },
   "formatter": {
     "enabled": true,
-    "indentStyle": "space"
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 80
   },
   "javascript": {
     "formatter": {
       "semicolons": "asNeeded",
       "trailingCommas": "none"
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true
     }
   },
   "linter": {

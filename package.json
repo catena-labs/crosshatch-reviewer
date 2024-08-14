@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "check": "biome check . && bun run type-check && bun test",
+    "check": "bun run format:check && bun run lint && bun run type-check && bun test",
     "clean": "git clean -xdf .next node_modules/.cache",
     "build": "next build",
     "dev": "next dev --turbo",
     "fix": "bun format && bun lint --fix",
     "format": "biome format --write .",
     "format:check": "biome format .",
-    "lint": "biome lint .",
+    "lint": "eslint . && biome lint .",
     "outdated": "bunx npm-check-updates --interactive --format group",
+    "prebuild": "bun run lint",
     "setup": "./bin/setup",
     "start": "next start",
     "type-check": "tsc --noEmit --pretty"
@@ -23,31 +24,39 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "geist": "^1.3.1",
-    "lucide-react": "^0.418.0",
-    "next": "^15.0.0-canary.106",
+    "lucide-react": "^0.427.0",
+    "next": "^15.0.0-canary.115",
     "next-themes": "^0.3.0",
-    "react": "^19.0.0-rc-187dd6a7-20240806",
-    "react-dom": "^19.0.0-rc-187dd6a7-20240806",
-    "tailwind-merge": "^2.4.0",
-    "tailwindcss-animate": "^1.0.7",
+    "react": "^19.0.0-rc-d48603a5-20240813",
+    "react-dom": "^19.0.0-rc-d48603a5-20240813",
+    "tailwind-merge": "^2.5.2",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
+    "@eslint/compat": "^1.1.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.9.0",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "15.0.0-canary.94",
-    "@tailwindcss/typography": "^0.5.13",
+    "@tailwindcss/typography": "^0.5.14",
     "@types/bun": "^1.1.6",
+    "@types/eslint__js": "^8.42.3",
     "@types/mdx": "^2.0.13",
     "@types/react": "npm:types-react@rc",
     "@types/react-dom": "npm:types-react-dom@rc",
+    "eslint": "^9.9.0",
+    "eslint-config-next": "^15.0.0-canary.115",
     "postcss": "^8",
-    "tailwindcss": "^3.4.7",
-    "typescript": "^5"
+    "tailwindcss": "^3.4.10",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5",
+    "typescript-eslint": "^8.1.0"
   },
   "overrides": {
     "@types/react": "npm:types-react@rc",
-    "@types/react-dom": "npm:types-react-dom@rc"
+    "@types/react-dom": "npm:types-react-dom@rc",
+    "eslint": "^9.9.0"
   }
 }

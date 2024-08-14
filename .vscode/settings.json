@@ -1,5 +1,4 @@
 {
-  // Filetype-specific config
   "[css]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
@@ -8,7 +7,6 @@
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "biomejs.biome"
-
   },
   "[json]": {
     "editor.defaultFormatter": "biomejs.biome",
@@ -34,22 +32,22 @@
     "editor.defaultFormatter": "biomejs.biome"
   },
 
-  // Editor Config
   "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
     "quickfix.biome": "explicit",
     "source.organizeImports.biome": "explicit"
   },
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
 
-  // Files config
+  "eslint.useFlatConfig": true,
+
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "files.associations": {
     "*.css": "tailwindcss"
   },
 
-  // Typescript config
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.tsdk": "node_modules/typescript/lib"
 }
