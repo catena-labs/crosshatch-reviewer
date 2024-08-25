@@ -1,4 +1,5 @@
 import createMDX from "@next/mdx"
+
 import type { NextConfig } from "next"
 import "./env/client"
 import "./env/server"
@@ -19,8 +20,8 @@ const nextConfig: NextConfig = {
 const withMDX = createMDX({
   // Add markdown plugins here, as desired
   options: {
-    remarkPlugins: [],
-    rehypePlugins: []
+    rehypePlugins: [],
+    remarkPlugins: []
   }
 })
 

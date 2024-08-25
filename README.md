@@ -10,7 +10,7 @@
 - ✅ The latest **Next.js** (v15 rc)
 - ✅ **Bun** package manager and test runner
 - ✅ Complete type-aware linting with **Eslint 9**
-- ✅ Insanely fast linting and code-style from **Biome**
+- ✅ Beautiful code-style from **Prettier**
 - ✅ Automatic CI with **Github Actions**
 - ✅ Type-safe environment variables via **t3-env**
 - ✅ **Tailwind CSS** for utility-first CSS

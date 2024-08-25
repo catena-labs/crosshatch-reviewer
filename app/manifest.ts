@@ -1,21 +1,22 @@
 import { siteConfig } from "@/config/site"
+
 import type { MetadataRoute } from "next"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
+    background_color: "#fff",
+    description: siteConfig.description,
+    display: "standalone",
+    icons: [
+      { sizes: "any", src: "/favicon.ico", type: "image/x-icon" },
+      { sizes: "16x16", src: "/icon1.png", type: "image/png" },
+      { sizes: "32x32", src: "/icon2.png", type: "image/png" },
+      { sizes: "192x192", src: "/icon3.png", type: "image/png" },
+      { sizes: "512x512", src: "/icon4.png", type: "image/png" }
+    ],
     name: siteConfig.name,
     short_name: siteConfig.shortName,
-    description: siteConfig.description,
     start_url: "/",
-    display: "standalone",
-    background_color: "#fff",
-    theme_color: "#fff",
-    icons: [
-      { src: "/favicon.ico", sizes: "any", type: "image/x-icon" },
-      { src: "/icon1.png", sizes: "16x16", type: "image/png" },
-      { src: "/icon2.png", sizes: "32x32", type: "image/png" },
-      { src: "/icon3.png", sizes: "192x192", type: "image/png" },
-      { src: "/icon4.png", sizes: "512x512", type: "image/png" }
-    ]
+    theme_color: "#fff"
   }
 }

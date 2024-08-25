@@ -1,11 +1,13 @@
+import { CopyrightIcon } from "lucide-react"
+import Link from "next/link"
+
 import { GithubIcon } from "@/components/icons/social/github-icon"
 import { XTwitterIcon } from "@/components/icons/social/x-twitter-icon"
 import { ThemeToggle } from "@/components/layout/theme-toggle"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils/cn"
-import { CopyrightIcon } from "lucide-react"
-import Link from "next/link"
+
 import type { HTMLProps } from "react"
 
 type Props = HTMLProps<HTMLDivElement>
@@ -46,17 +48,17 @@ export function Footer({ className, ...props }: Props) {
         </div>
 
         <nav className="flex flex-row items-center space-x-2">
-          <Button variant="ghost" className="h-8 w-8 px-0" asChild>
+          <Button variant="ghost" className="size-8 px-0" asChild>
             <Link
               href={siteConfig.links.github}
               target="_blank"
               rel="noreferrer"
             >
               <span className="sr-only">Github</span>
-              <GithubIcon className="h-4 w-4" />
+              <GithubIcon className="size-4" />
             </Link>
           </Button>
-          <Button variant="ghost" className="h-8 w-8 px-0" asChild>
+          <Button variant="ghost" className="size-8 px-0" asChild>
             <Link
               href={siteConfig.links.twitter}
               target="_blank"

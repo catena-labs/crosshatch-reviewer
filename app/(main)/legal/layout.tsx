@@ -1,11 +1,13 @@
+import Link from "next/link"
+
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/config/site"
-import Link from "next/link"
+
 import type { PropsWithChildren } from "react"
 
 export default function LegalLayout({ children }: Readonly<PropsWithChildren>) {
   return (
-    <main className="prose prose-zinc lg:prose-xl dark:prose-invert container py-8">
+    <main className="container prose prose-zinc py-8 dark:prose-invert lg:prose-xl">
       <Button variant="link" className="px-0 no-underline" asChild>
         <Link href="/">← Back to {siteConfig.name}</Link>
       </Button>
