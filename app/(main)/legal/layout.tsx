@@ -8,7 +8,7 @@ import type { PropsWithChildren } from "react"
 export default function LegalLayout({ children }: Readonly<PropsWithChildren>) {
   return (
     <main className="container prose prose-zinc py-8 dark:prose-invert lg:prose-xl">
-      <Button variant="link" className="px-0 no-underline" asChild>
+      <Button asChild className="px-0 no-underline" variant="link">
         <Link href="/">← Back to {siteConfig.name}</Link>
       </Button>
       <article className="">{children}</article>

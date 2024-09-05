@@ -10,12 +10,11 @@
     "module": "esnext",
     "moduleResolution": "bundler",
 
+    "allowUnreachableCode": false,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
     "noUncheckedIndexedAccess": true,
-    "allowUnreachableCode": false,
+    "noUnusedLocals": true,
 
     "resolveJsonModule": true,
     "isolatedModules": true,

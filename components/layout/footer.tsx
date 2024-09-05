@@ -18,29 +18,29 @@ export function Footer({ className, ...props }: Props) {
       <div className="container flex flex-col flex-wrap items-center justify-between gap-6 sm:flex-row">
         <div className="flex flex-col sm:flex-row">
           <Button
-            variant="link"
-            className="gap-2 text-muted-foreground hover:text-foreground"
             asChild
+            className="gap-2 text-muted-foreground hover:text-foreground"
+            variant="link"
           >
             <Link href="/">
-              <CopyrightIcon width={16} height={16} />
+              <CopyrightIcon height={16} width={16} />
               {new Date().getFullYear()} {siteConfig.name}
             </Link>
           </Button>
 
           <nav className="flex flex-row items-center justify-center gap-2 sm:justify-start">
             <Button
-              variant="link"
-              className="px-0 text-muted-foreground hover:text-foreground"
               asChild
+              className="px-0 text-muted-foreground hover:text-foreground"
+              variant="link"
             >
               <Link href="/legal/privacy">Privacy</Link>
             </Button>
 
             <Button
-              variant="link"
-              className="px-0 text-muted-foreground hover:text-foreground"
               asChild
+              className="px-0 text-muted-foreground hover:text-foreground"
+              variant="link"
             >
               <Link href="/legal/terms">Terms</Link>
             </Button>
@@ -48,21 +48,21 @@ export function Footer({ className, ...props }: Props) {
         </div>
 
         <nav className="flex flex-row items-center space-x-2">
-          <Button variant="ghost" className="size-8 px-0" asChild>
+          <Button asChild className="size-8 px-0" variant="ghost">
             <Link
               href={siteConfig.links.github}
-              target="_blank"
               rel="noreferrer"
+              target="_blank"
             >
               <span className="sr-only">Github</span>
               <GithubIcon className="size-4" />
             </Link>
           </Button>
-          <Button variant="ghost" className="size-8 px-0" asChild>
+          <Button asChild className="size-8 px-0" variant="ghost">
             <Link
               href={siteConfig.links.twitter}
-              target="_blank"
               rel="noreferrer"
+              target="_blank"
             >
               <span className="sr-only">X (Twitter)</span>
               <XTwitterIcon className="size-4" />

@@ -61,6 +61,15 @@ export default tseslint.config(
           "newlines-between": "always"
         }
       ],
+      "react/jsx-sort-props": [
+        "warn",
+        {
+          callbacksLast: true,
+          ignoreCase: true,
+          reservedFirst: true,
+          shorthandLast: true
+        }
+      ],
       "sort-imports": [
         "error",
         {
