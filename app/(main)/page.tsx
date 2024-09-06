@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import logo from "@/app/icon4.png"
+import { Logo } from "@/components/icons/brand/logo"
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
@@ -9,14 +9,7 @@ export default function Home() {
     <main className="flex grow flex-col items-center justify-center">
       <div className="container flex max-w-md flex-col items-center gap-8 sm:items-start">
         <div className="flex flex-row items-center gap-2">
-          <Image
-            alt="App logo"
-            className="aspect-square transition-all hover:-rotate-12 hover:scale-105 dark:invert"
-            height={42}
-            src={logo}
-            width={42}
-            priority
-          />
+          <Logo className="size-11" />
           <h1 className="font-mono text-3xl font-extrabold">StartKit</h1>
         </div>
         <ol className="list-inside list-decimal text-center font-mono text-sm sm:text-left">

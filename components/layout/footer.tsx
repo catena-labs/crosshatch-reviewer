@@ -18,9 +18,9 @@ export function Footer({ className, ...props }: Props) {
       <div className="container flex flex-col flex-wrap items-center justify-between gap-6 sm:flex-row">
         <div className="flex flex-col sm:flex-row">
           <Button
-            asChild
             className="gap-2 text-muted-foreground hover:text-foreground"
             variant="link"
+            asChild
           >
             <Link href="/">
               <CopyrightIcon height={16} width={16} />
@@ -30,17 +30,17 @@ export function Footer({ className, ...props }: Props) {
 
           <nav className="flex flex-row items-center justify-center gap-2 sm:justify-start">
             <Button
-              asChild
               className="px-0 text-muted-foreground hover:text-foreground"
               variant="link"
+              asChild
             >
               <Link href="/legal/privacy">Privacy</Link>
             </Button>
 
             <Button
-              asChild
               className="px-0 text-muted-foreground hover:text-foreground"
               variant="link"
+              asChild
             >
               <Link href="/legal/terms">Terms</Link>
             </Button>
@@ -48,7 +48,7 @@ export function Footer({ className, ...props }: Props) {
         </div>
 
         <nav className="flex flex-row items-center space-x-2">
-          <Button asChild className="size-8 px-0" variant="ghost">
+          <Button className="size-8 px-0" variant="ghost" asChild>
             <Link
               href={siteConfig.links.github}
               rel="noreferrer"
@@ -58,7 +58,7 @@ export function Footer({ className, ...props }: Props) {
               <GithubIcon className="size-4" />
             </Link>
           </Button>
-          <Button asChild className="size-8 px-0" variant="ghost">
+          <Button className="size-8 px-0" variant="ghost" asChild>
             <Link
               href={siteConfig.links.twitter}
               rel="noreferrer"
