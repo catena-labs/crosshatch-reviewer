@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+# Exit if any command fails:
+set -e
+
+echo "Building app ..."
+bunx @cloudflare/next-on-pages@1
+
+echo "Done!"

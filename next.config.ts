@@ -1,3 +1,4 @@
+import { setupDevPlatform } from "@cloudflare/next-on-pages/next-dev"
 import createMDX from "@next/mdx"
 
 import type { NextConfig } from "next"
@@ -24,5 +25,9 @@ const withMDX = createMDX({
     remarkPlugins: []
   }
 })
+
+if (process.env.NODE_ENV === "development") {
+  void setupDevPlatform()
+}
 
 export default withMDX(nextConfig)

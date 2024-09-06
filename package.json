@@ -11,8 +11,11 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
+    "logs": "wrangler pages deployment tail",
     "outdated": "bunx npm-check-updates --interactive --format group",
     "prebuild": "bun run lint",
+    "preview": "bunx @cloudflare/next-on-pages && wrangler pages dev",
+    "release": "./bin/release",
     "setup": "./bin/setup",
     "start": "next start",
     "typecheck": "tsc --noEmit --pretty"
@@ -35,6 +38,8 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.2",
+    "@cloudflare/workers-types": "^4.20240909.0",
     "@eslint/compat": "^1.1.1",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.10.0",
@@ -62,6 +67,7 @@
   "overrides": {
     "@types/react": "npm:types-react@rc",
     "@types/react-dom": "npm:types-react-dom@rc",
-    "eslint": "^9.10.0"
+    "eslint": "^9.10.0",
+    "string-width": "4.2.3"
   }
 }

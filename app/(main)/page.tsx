@@ -1,4 +1,4 @@
-import Image from "next/image"
+import { FlameIcon } from "lucide-react"
 import Link from "next/link"
 
 import { Logo } from "@/components/icons/brand/logo"
@@ -25,17 +25,11 @@ export default function Home() {
         <div className="flex flex-col items-center gap-4 sm:flex-row">
           <Button className="rounded-full" size="lg" variant="default" asChild>
             <Link
-              href="https://vercel.com/new"
+              href="https://pages.cloudflare.com"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <Image
-                alt="Vercel logomark"
-                className="dark:invert"
-                height={20}
-                src="https://nextjs.org/icons/vercel.svg"
-                width={20}
-              />
+              <FlameIcon className="size-4 fill-current" />
               Deploy now
             </Link>
           </Button>

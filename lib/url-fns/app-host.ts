@@ -1,8 +1,12 @@
-import { env } from "@/env/client"
+import { env } from "@/env/server"
 
 function host(fallback = "/") {
   if (env.NEXT_PUBLIC_HOST) {
     return env.NEXT_PUBLIC_HOST
+  }
+
+  if (env.CF_PAGES_URL) {
+    return env.CF_PAGES_URL
   }
 
   if (env.VERCEL_URL) {
