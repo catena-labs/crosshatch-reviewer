@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "check": "bun run format:check && bun run lint && bun run type-check && bun test",
+    "check": "bun run format:check && bun run lint && bun run typecheck && bun test",
     "clean": "git clean -xdf .next node_modules/.cache",
     "build": "next build",
     "dev": "next dev --turbo",
@@ -15,7 +15,7 @@
     "prebuild": "bun run lint",
     "setup": "./bin/setup",
     "start": "next start",
-    "type-check": "tsc --noEmit --pretty"
+    "typecheck": "tsc --noEmit --pretty"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.1",
@@ -31,6 +31,7 @@
     "react": "19.0.0-rc-d1afcb43-20240903",
     "react-dom": "19.0.0-rc-d1afcb43-20240903",
     "tailwind-merge": "^2.5.2",
+    "typed-route-handler": "^0.3.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
