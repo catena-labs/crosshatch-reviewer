@@ -1,6 +1,6 @@
 import { env } from "@/env/client"
 
-function host(fallback = "") {
+function host(fallback = "/") {
   if (env.NEXT_PUBLIC_HOST) {
     return env.NEXT_PUBLIC_HOST
   }
