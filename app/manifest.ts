@@ -8,7 +8,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: siteConfig.description,
     display: "standalone",
     icons: [
-      { sizes: "any", src: "/favicon.ico", type: "image/x-icon" },
+      { sizes: "48x48", src: "/favicon.ico", type: "image/x-icon" },
       { sizes: "16x16", src: "/icon1.png", type: "image/png" },
       { sizes: "32x32", src: "/icon2.png", type: "image/png" },
       { sizes: "192x192", src: "/icon3.png", type: "image/png" },
