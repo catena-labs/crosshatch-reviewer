@@ -88,6 +88,15 @@ export default tseslint.config(
     }
   },
   /**
+   * Test files
+   */
+  {
+    files: ["**/*.test.{js,ts}"],
+    rules: {
+      "@typescript-eslint/no-non-null-assertion": "off"
+    }
+  },
+  /**
    * Config files
    */
   {

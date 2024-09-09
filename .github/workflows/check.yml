@@ -11,8 +11,6 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
-    env:
-      NEXT_PUBLIC_HOST: http://test.host
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
