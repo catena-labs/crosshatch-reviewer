@@ -25,7 +25,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "geist": "^1.3.1",
-    "lucide-react": "^0.439.0",
+    "lucide-react": "^0.441.0",
     "next": "15.0.0-canary.144",
     "next-themes": "^0.3.0",
     "react": "19.0.0-rc-a03254bc-20240905",
@@ -42,7 +42,7 @@
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "15.0.0-canary.144",
     "@tailwindcss/typography": "^0.5.15",
-    "@types/bun": "^1.1.8",
+    "@types/bun": "^1.1.9",
     "@types/eslint__js": "^8.42.3",
     "@types/mdx": "^2.0.13",
     "@types/react": "npm:types-react@rc",
@@ -54,10 +54,10 @@
     "eslint-plugin-tailwindcss": "^3.17.4",
     "postcss": "^8",
     "prettier": "3.3.3",
-    "tailwindcss": "^3.4.10",
+    "tailwindcss": "^3.4.11",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5",
-    "typescript-eslint": "^8.4.0"
+    "typescript-eslint": "^8.5.0"
   },
   "overrides": {
     "@types/react": "npm:types-react@rc",
