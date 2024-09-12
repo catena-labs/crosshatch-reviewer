@@ -1,8 +1,7 @@
 import { describe, expect, test } from "bun:test"
 
-import { env } from "@/env/client"
-
 import { appHost } from "./app-host"
+import { env } from "@/env/client"
 
 describe("appHost()", () => {
   test("returns the app host", () => {
