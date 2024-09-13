@@ -2,7 +2,9 @@ import { FlameIcon } from "lucide-react"
 import Link from "next/link"
 
 import { Logo } from "@/components/icons/brand/logo"
+import { GithubIcon } from "@/components/icons/social/github-icon"
 import { Button } from "@/components/ui/button"
+import { siteConfig } from "@/config/site"
 
 export default function Home() {
   return (
@@ -23,7 +25,12 @@ export default function Home() {
         </ol>
 
         <div className="flex flex-col items-center gap-4 sm:flex-row">
-          <Button className="rounded-full" size="lg" variant="default" asChild>
+          <Button
+            className="gap-2 rounded-full"
+            size="lg"
+            variant="default"
+            asChild
+          >
             <Link
               href="https://pages.cloudflare.com"
               rel="noopener noreferrer"
@@ -35,16 +42,17 @@ export default function Home() {
           </Button>
 
           <Button
-            className="rounded-full"
+            className="gap-2 rounded-full"
             size="lg"
             variant="secondary"
             asChild
           >
             <Link
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+              href={siteConfig.links.github}
               rel="noopener noreferrer"
               target="_blank"
             >
+              <GithubIcon className="size-4" />
               Read our docs
             </Link>
           </Button>
