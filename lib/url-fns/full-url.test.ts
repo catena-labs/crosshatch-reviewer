@@ -1,6 +1,7 @@
 import { describe, expect, test } from "bun:test"
 
 import { fullURL } from "./full-url"
+import { env } from "@/env/client"
 
 describe("fullURL()", () => {
   test("returns a full URL by appending the path to the host", () => {
