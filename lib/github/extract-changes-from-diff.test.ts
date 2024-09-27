@@ -1,5 +1,5 @@
 import { describe, expect, it } from "bun:test"
-import { estractChangesFromDiff } from "./extract-changes-from-diff"
+import { extractChangesFromDiff } from "./extract-changes-from-diff"
 
 /**
  *  Diffs are in the following format, which has:
@@ -42,9 +42,9 @@ index ad98df2fe..000000000
 -the rest of the deleted file
 `
 
-describe("estractChangesFromDiff()", () => {
+describe("extractChangesFromDiff()", () => {
   it("works", () => {
-    const result = estractChangesFromDiff(diff)
+    const result = extractChangesFromDiff(diff)
 
     expect(result).toEqual([
       "Changed 'path/to/file':\n-old line 1\n+new line 1\nline 2\n+new line 2\nline 3",

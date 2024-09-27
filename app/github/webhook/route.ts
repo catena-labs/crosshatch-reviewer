@@ -4,7 +4,7 @@ import { z } from "zod"
 import { summarizeChanges } from "@/lib/crosshatch/summarize-changes"
 import { getClient } from "@/lib/github/client"
 import { createPullRequestComment } from "@/lib/github/create-pull-request-comment"
-import { estractChangesFromDiff } from "@/lib/github/extract-changes-from-diff"
+import { extractChangesFromDiff } from "@/lib/github/extract-changes-from-diff"
 import { getPullRequestDiff } from "@/lib/github/get-pull-request-diff"
 
 export const fetchCache = "force-no-store"
@@ -99,7 +99,7 @@ export async function POST(req: NextRequest) {
 
   console.log("Diff", { diff })
 
-  const changes = estractChangesFromDiff(diff)
+  const changes = extractChangesFromDiff(diff)
   console.log("Changes", { changes })
   const summary = await summarizeChanges(changes)
 

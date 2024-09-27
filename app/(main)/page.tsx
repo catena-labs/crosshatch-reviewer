@@ -3,7 +3,6 @@ import Link from "next/link"
 import { Logo } from "@/components/icons/brand/logo"
 import { GithubIcon } from "@/components/icons/social/github-icon"
 import { Button } from "@/components/ui/button"
-import { siteConfig } from "@/config/site"
 
 export default function Home() {
   return (

@@ -1,6 +1,6 @@
 import { compact } from "es-toolkit/array"
 
-export function estractChangesFromDiff(diff: string) {
+export function extractChangesFromDiff(diff: string) {
   return compact(
     diff
       .split(/diff --git /)
