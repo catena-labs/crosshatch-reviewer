@@ -5,3 +5,5 @@ pages_build_output_dir = ".vercel/output/static"
 
 [vars]
 NODE_VERSION = "20"
+GITHUB_APP_ID = "1009956"
+CROSSHATCH_BASE_URL="https://crosshatch-router-staging.catena-dev.workers.dev/v1"
