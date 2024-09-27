@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Logo } from "@/components/icons/brand/logo"
 import { GithubIcon } from "@/components/icons/social/github-icon"
 import { Button } from "@/components/ui/button"
+import { env } from "@/env/server"
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
             asChild
           >
             <Link
-              href="https://github.com/apps/crosshatch-reviewer-dev/installations/new"
+              href={`https://github.com/apps/${env.GITHUB_APP_SLUG}/installations/new`}
               rel="noopener noreferrer"
               target="_blank"
             >
