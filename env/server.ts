@@ -13,6 +13,20 @@ export const env = createEnv({
     CF_PAGES_COMMIT_SHA: z.string().default("unknown"),
     CF_PAGES_URL: z.string().url().optional(),
     /**
+     * Github
+     */
+    GITHUB_APP_WEBHOOK_SECRET: z.string(),
+    GITHUB_APP_ID: z.coerce.number(),
+    GITHUB_APP_CLIENT_ID: z.string(),
+    GITHUB_APP_CLIENT_SECRET: z.string(),
+    GITHUB_APP_PRIVATE_KEY: z.string(),
+
+    /**
+     * Crosshatch
+     */
+    CROSSHATCH_BASE_URL: z.string().url().optional(),
+    CROSSHATCH_API_KEY: z.string().optional(),
+    /**
      * Misc
      */
     NODE_VERSION: z.string().optional()

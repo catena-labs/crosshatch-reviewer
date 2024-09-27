@@ -1,26 +1,10 @@
-<h1 align="center">startkit-next</h1>
+<h1 align="center">Crosshatch Reviewer</h1>
 
 <div align="center">
-  <strong>A sane way to start your next Next.js project</strong>
-  <p>A type-safe starter project following the latest best practices</p>
+  <strong>Automatic pull request summarizer</strong>
 </div>
 
-## Features
-
-- ✅ The latest **Next.js** (v15 rc)
-- ✅ **Bun** package manager and test runner
-- ✅ Complete type-aware linting with **Eslint 9**
-- ✅ Beautiful code-style from **Prettier**
-- ✅ Automatic CI with **Github Actions**
-- ✅ Type-safe environment variables via **t3-env**
-- ✅ **Tailwind CSS** for utility-first CSS
-- ✅ Automatic **sitemap.xml**, **robots.txt**, and **manifest** generation
-
 ## Installation
-
-```sh
-git clone git@github.com:startkit-dev/next.git <your-project-name>
-```
 
 Once cloned, you can run the setup script to get everything initialized:
 

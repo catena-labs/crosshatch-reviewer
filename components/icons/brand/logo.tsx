@@ -1,4 +1,4 @@
-import { RocketIcon } from "lucide-react"
+import { BracesIcon } from "lucide-react"
 
 import type { HTMLAttributes } from "react"
 import { cn } from "@/lib/utils/cn"
@@ -14,7 +14,7 @@ export function Logo({ className, ...props }: LogoProps) {
       )}
       {...props}
     >
-      <RocketIcon className="size-3/5 text-background" />
+      <BracesIcon className="size-3/5 text-background" />
     </span>
   )
 }

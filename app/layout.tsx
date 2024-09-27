@@ -6,8 +6,8 @@ import { ThemeProvider } from "next-themes"
 import type { PropsWithChildren } from "react"
 import { TailwindIndicator } from "@/components/layout/tailwind-indicator"
 import { siteConfig } from "@/config/site"
-import { fullURL } from "@/lib/url-fns/full-url"
 import { cn } from "@/lib/utils/cn"
+import { fullURL } from "@/lib/utils/url-fns/full-url"
 
 export const metadata: Metadata = {
   applicationName: siteConfig.name,
@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   openGraph: {
     description: siteConfig.description,
     siteName: siteConfig.name,
-    title: "A sane way to start your next next.js project",
+    title: "Automatically summarize your pull requests",
     type: "website",
     url: fullURL()
   },
   title: {
-    default: `A sane way to start your next next.js project | ${siteConfig.name}`,
+    default: `Automatically summarize your pull requests | ${siteConfig.name}`,
     template: `%s | ${siteConfig.name}`
   },
   twitter: {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     creator: siteConfig.author.twitter,
     description: siteConfig.description,
     site: siteConfig.handles.twitter,
-    title: "A sane way to start your next next.js project"
+    title: "Automatically summarize your pull requests"
   }
 }
 
