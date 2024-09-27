@@ -7,7 +7,7 @@ import { createPullRequestComment } from "@/lib/github/create-pull-request-comme
 import { extractChangesFromDiff } from "@/lib/github/extract-changes-from-diff"
 import { getPullRequestDiff } from "@/lib/github/get-pull-request-diff"
 
-export const fetchCache = "force-no-store"
+export const runtime = "edge"
 
 /**
  * Schemas from {@link https://docs.github.com/en/webhooks/webhook-events-and-payloads?actionType=opened#pull_request}
