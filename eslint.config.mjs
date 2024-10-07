@@ -1,5 +1,7 @@
 // @ts-check
 
+import path from "node:path"
+import { fileURLToPath } from "node:url"
 import { fixupPluginRules, includeIgnoreFile } from "@eslint/compat"
 import eslint from "@eslint/js"
 import nextPlugin from "@next/eslint-plugin-next"
@@ -11,6 +13,10 @@ import reactHooks from "eslint-plugin-react-hooks"
 import tailwind from "eslint-plugin-tailwindcss"
 import globals from "globals"
 import tseslint from "typescript-eslint"
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const gitignorePath = path.resolve(__dirname, ".gitignore")
 
 const nextFlatConfig = {
   plugins: {
@@ -24,7 +30,7 @@ const nextFlatConfig = {
 }
 
 export default tseslint.config(
-  includeIgnoreFile(import.meta.dirname + "/.gitignore"),
+  includeIgnoreFile(gitignorePath),
   eslint.configs.recommended,
   ...tseslint.configs.strictTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,

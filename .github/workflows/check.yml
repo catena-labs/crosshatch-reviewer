@@ -18,3 +18,6 @@ jobs:
           bun-version: latest
       - run: bun run setup
       - run: bun run check
+        env:
+          GITHUB_APP_SLUG: "crosshatch-reviewer-ci"
+          GITHUB_APP_ID: "12345678"
