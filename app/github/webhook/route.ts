@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server"
 import { z } from "zod"
 import { summarizeChanges } from "@/lib/crosshatch/summarize-changes"
 import { getClient } from "@/lib/github/client"
-import { createPullRequestComment } from "@/lib/github/create-pull-request-comment"
+import { createOrUpdatePullRequestComment } from "@/lib/github/create-or-update-pull-request-comment"
 import { extractChangesFromDiff } from "@/lib/github/extract-changes-from-diff"
 import { getPullRequestDiff } from "@/lib/github/get-pull-request-diff"
 
@@ -108,7 +108,7 @@ export async function POST(req: NextRequest) {
     notFound()
   }
 
-  await createPullRequestComment(
+  await createOrUpdatePullRequestComment(
     githubClient,
     payload.pull_request.base.repo.owner.login,
     payload.pull_request.base.repo.name,
