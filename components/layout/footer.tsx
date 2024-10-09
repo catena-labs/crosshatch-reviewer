@@ -1,6 +1,3 @@
-import { CopyrightIcon } from "lucide-react"
-import Link from "next/link"
-
 import type { HTMLProps } from "react"
 import { GithubIcon } from "@/components/icons/social/github-icon"
 import { XTwitterIcon } from "@/components/icons/social/x-twitter-icon"
@@ -21,19 +18,28 @@ export function Footer({ className, ...props }: Props) {
             variant="link"
             asChild
           >
-            <Link href="/">
-              <CopyrightIcon height={16} width={16} />
-              {new Date().getFullYear()} {siteConfig.name}
-            </Link>
+            <a
+              href={siteConfig.author.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              &copy; {new Date().getFullYear()} {siteConfig.author.name}
+            </a>
           </Button>
 
-          <nav className="flex flex-row items-center justify-center gap-2 sm:justify-start">
+          <nav className="flex flex-row items-center justify-center gap-3 sm:justify-start">
             <Button
               className="px-0 text-muted-foreground hover:text-foreground"
               variant="link"
               asChild
             >
-              <Link href="/legal/privacy">Privacy</Link>
+              <a
+                href="https://crosshatch.app/legal/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy
+              </a>
             </Button>
 
             <Button
@@ -41,31 +47,29 @@ export function Footer({ className, ...props }: Props) {
               variant="link"
               asChild
             >
-              <Link href="/legal/terms">Terms</Link>
+              <a
+                href="https://crosshatch.app/legal/terms"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms
+              </a>
             </Button>
           </nav>
         </div>
 
         <nav className="flex flex-row items-center space-x-2">
           <Button className="size-8 px-0" variant="ghost" asChild>
-            <Link
-              href={siteConfig.links.github}
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a href={siteConfig.links.github} rel="noreferrer" target="_blank">
               <span className="sr-only">Github</span>
               <GithubIcon className="size-4" />
-            </Link>
+            </a>
           </Button>
           <Button className="size-8 px-0" variant="ghost" asChild>
-            <Link
-              href={siteConfig.links.twitter}
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a href={siteConfig.links.twitter} rel="noreferrer" target="_blank">
               <span className="sr-only">X (Twitter)</span>
               <XTwitterIcon className="size-4" />
-            </Link>
+            </a>
           </Button>
 
           <ThemeToggle />
