@@ -82,7 +82,9 @@ export async function POST(req: NextRequest) {
     console.log(
       `Not a PR open or synchronize event, got '${payload.action}' skipping.`
     )
-    notFound()
+    return NextResponse.json({
+      ok: true
+    })
   }
 
   const githubClient = await getClient({
