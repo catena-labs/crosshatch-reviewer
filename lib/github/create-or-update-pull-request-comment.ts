@@ -1,4 +1,4 @@
-import { Octokit } from "@octokit/rest"
+import type { Octokit } from "@octokit/rest"
 
 export async function createOrUpdatePullRequestComment(
   client: Octokit,
@@ -18,7 +18,7 @@ export async function createOrUpdatePullRequestComment(
   })
 
   if (appComment) {
-    console.log("Comment found, updating... ")
+    console.debug("Comment found, updating... ")
     return client.rest.issues.updateComment({
       owner,
       repo,
@@ -27,7 +27,7 @@ export async function createOrUpdatePullRequestComment(
     })
   }
 
-  console.log("Creating new comment...")
+  console.debug("Creating new comment...")
 
   return client.issues.createComment({
     owner,

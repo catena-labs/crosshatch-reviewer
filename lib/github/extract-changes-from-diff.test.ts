@@ -43,7 +43,7 @@ index ad98df2fe..000000000
 `
 
 describe("extractChangesFromDiff()", () => {
-  it("works", () => {
+  it("extracts changes from a diff into an LLM-readable format", () => {
     const result = extractChangesFromDiff(diff)
 
     expect(result).toEqual([
@@ -52,6 +52,5 @@ describe("extractChangesFromDiff()", () => {
       "Changed 'apps/mini-crosshatch/components/ui/checkbox.tsx':\n+\"use client\"\n+the rest of the new file",
       "Deleted 'apps/mini-crosshatch/app/login/page.tsx'"
     ])
-    console.log(result)
   })
 })

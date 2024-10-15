@@ -16,7 +16,7 @@ export default function Home() {
             <h1 className="text-3xl font-extrabold">Reviewer</h1>
           </div>
         </div>
-        <ol className="list-inside list-decimal text-center font-mono text-sm sm:text-left">
+        <ol className="list-inside list-decimal text-left font-mono text-sm">
           <li className="mb-1">Install the app on your repository</li>
           <li className="mb-1">Open up a Pull Request.</li>
           <li>That's it</li>

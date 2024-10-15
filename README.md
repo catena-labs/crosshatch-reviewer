@@ -34,3 +34,9 @@ bun format:check  - Check the formatting of the repository
 bun format        - Fix any formatting issues
 bun run outdated  - Find any outdated packages
 ```
+
+---
+
+## Credits
+
+This project is powered by [Crosshatch](https://crosshatch.app) by [Catena Labs](https://catena.xyz).

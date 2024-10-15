@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { NextRequest, NextResponse } from "next/server"
+import { type NextRequest, NextResponse } from "next/server"
 import { z } from "zod"
 import { summarizeChanges } from "@/lib/crosshatch/summarize-changes"
 import { getClient } from "@/lib/github/client"
@@ -63,10 +63,7 @@ function isOpenedOrSynchronizedPullRequest(
 
 export async function POST(req: NextRequest) {
   const json = (await req.json()) as unknown
-  console.log("Got a payload", JSON.stringify({ json }, null, 2))
   const payload = payloadSchema.parse(json)
-
-  console.log("parsed payload", JSON.stringify({ payload }, null, 2))
 
   /**
    * If there's no installation, we can't authenticate.
@@ -79,7 +76,7 @@ export async function POST(req: NextRequest) {
    * We only handle opened/syncrhonized PRs right now
    */
   if (!isOpenedOrSynchronizedPullRequest(payload)) {
-    console.log(
+    console.debug(
       `Not a PR open or synchronize event, got '${payload.action}' skipping.`
     )
     return NextResponse.json({
@@ -99,14 +96,11 @@ export async function POST(req: NextRequest) {
     payload.number
   )
 
-  console.log("Diff", { diff })
-
   const changes = extractChangesFromDiff(diff)
-  console.log("Changes", { changes })
   const summary = await summarizeChanges(changes)
 
   if (!summary) {
-    console.log("No summary, skipping.")
+    console.debug("No summary, skipping.")
     notFound()
   }
 
