@@ -37,6 +37,6 @@ bun run outdated  - Find any outdated packages
 
 ---
 
-## Credits
+<a href="https://crosshatch.app" target="_blank"><img src="./public/powered-by-crosshatch.png" width="204" height="60" /></a>
 
 This project is powered by [Crosshatch](https://crosshatch.app) by [Catena Labs](https://catena.xyz).
