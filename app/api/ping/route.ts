@@ -12,7 +12,7 @@ interface ResponseBody {
 
 export const GET = handler<ResponseBody>(() => {
   return NextResponse.json({
-    pong: env.CF_PAGES_COMMIT_SHA,
+    pong: env.VERCEL_GIT_COMMIT_SHA ?? "unknown",
     timestamp: new Date().toISOString()
   })
 })

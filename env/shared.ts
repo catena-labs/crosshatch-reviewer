@@ -9,7 +9,10 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV
   },
   shared: {
-    NEXT_PUBLIC_HOST: z.string().url().optional(),
+    NEXT_PUBLIC_HOST: z
+      .string()
+      .url()
+      .default("https://reviewer.crosshatch.app"),
     NODE_ENV: z
       .enum(["test", "development", "production"])
       .default("development")

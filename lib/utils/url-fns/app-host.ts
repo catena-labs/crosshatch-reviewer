@@ -5,10 +5,6 @@ function host(fallback = "/") {
     return env.NEXT_PUBLIC_HOST
   }
 
-  if (env.CF_PAGES_URL) {
-    return env.CF_PAGES_URL
-  }
-
   if (env.VERCEL_URL) {
     return `https://${env.VERCEL_URL}`
   }

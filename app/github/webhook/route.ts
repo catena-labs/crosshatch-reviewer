@@ -8,6 +8,7 @@ import { extractChangesFromDiff } from "@/lib/github/extract-changes-from-diff"
 import { getPullRequestDiff } from "@/lib/github/get-pull-request-diff"
 
 export const runtime = "edge"
+export const maxDuration = 300
 
 /**
  * Schemas from {@link https://docs.github.com/en/webhooks/webhook-events-and-payloads?actionType=opened#pull_request}

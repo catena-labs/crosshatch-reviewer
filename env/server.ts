@@ -8,11 +8,6 @@ export const env = createEnv({
   extends: [shared],
   server: {
     /**
-     * Cloudflare Env Vars
-     */
-    CF_PAGES_COMMIT_SHA: z.string().default("unknown"),
-    CF_PAGES_URL: z.string().url().optional(),
-    /**
      * Github
      */
     GITHUB_APP_WEBHOOK_SECRET: z.string(),
@@ -25,7 +20,10 @@ export const env = createEnv({
     /**
      * Crosshatch
      */
-    CROSSHATCH_BASE_URL: z.string().url().optional(),
+    CROSSHATCH_BASE_URL: z
+      .string()
+      .url()
+      .default("https://api.crosshatch.app/v1"),
     CROSSHATCH_API_KEY: z.string().optional(),
     /**
      * Misc
