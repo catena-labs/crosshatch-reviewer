@@ -5,7 +5,7 @@ import { summarizeChanges } from "@/lib/crosshatch/summarize-changes"
 import { getClient } from "@/lib/github/client"
 import { createOrUpdatePullRequestComment } from "@/lib/github/create-or-update-pull-request-comment"
 import { extractChangesFromDiff } from "@/lib/github/extract-changes-from-diff"
-import { getPullRequestDiff } from "@/lib/github/get-pull-request-diff"
+import { getPullRequestInfo } from "@/lib/github/get-pull-request-info"
 
 export const runtime = "edge"
 export const maxDuration = 300
@@ -89,8 +89,8 @@ export async function POST(req: NextRequest) {
     installationId: payload.installation.id
   })
 
-  // Load the diff
-  const diff = await getPullRequestDiff(
+  // Load the PR info
+  const { title, description, diff } = await getPullRequestInfo(
     githubClient,
     payload.pull_request.base.repo.owner.login,
     payload.pull_request.base.repo.name,
@@ -98,7 +98,7 @@ export async function POST(req: NextRequest) {
   )
 
   const changes = extractChangesFromDiff(diff)
-  const summary = await summarizeChanges(changes)
+  const summary = await summarizeChanges(title, description, changes)
 
   if (!summary) {
     console.debug("No summary, skipping.")
