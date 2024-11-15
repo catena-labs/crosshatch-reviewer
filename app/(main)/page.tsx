@@ -241,14 +241,3 @@ export default function Home() {
     </div>
   )
 }
-
-const getRandomOffset = () => {
-  const offsets = [
-    "translate-x-0",
-    "translate-x-2",
-    "-translate-x-4",
-    "translate-x-6",
-    "-translate-x-8"
-  ]
-  return offsets[Math.floor(Math.random() * offsets.length)]
-}
