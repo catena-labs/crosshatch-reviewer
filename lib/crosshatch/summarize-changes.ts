@@ -40,7 +40,7 @@ export async function summarizeChanges(
 
   const response = await openai.chat.completions.create({
     stream: false,
-    model: "lmsys-coding",
+    model: "gpt-4o",
     messages: [
       {
         role: "system",
