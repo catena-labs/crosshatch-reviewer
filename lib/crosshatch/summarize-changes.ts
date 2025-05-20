@@ -11,7 +11,7 @@ Using all inputs, you will summarize the changes into 4 sections:
 The first section is 'Summary', which is a maximum of 3 sentences giving an overview of the Pull Request and alerting if there is any major issues.
 The second section is 'Notable Changes' which is a bulleted list of major and notable changes.
 The third section is 'Potential concerns', which is a bulleted list any bugs, security threats, or other concerns if any are present.
-And the final section is 'Potential improvements' which is a bulleted list of thigns that may be done to improve the pull request.
+And the final section is 'Potential improvements' which is a bulleted list of things that may be done to improve the pull request.
 For all sections: never mention unimportant changes, such as imports or formatting changes. Be concise. Always write in markdown, never use header-1.`
 
 /**
