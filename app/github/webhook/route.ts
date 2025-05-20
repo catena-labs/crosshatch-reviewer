@@ -74,7 +74,7 @@ export async function POST(req: NextRequest) {
   }
 
   /**
-   * We only handle opened/syncrhonized PRs right now
+   * We only handle opened/synchronized PRs right now
    */
   if (!isOpenedOrSynchronizedPullRequest(payload)) {
     console.debug(
