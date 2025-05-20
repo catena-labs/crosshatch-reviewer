@@ -8,7 +8,7 @@
 #
 
 # Adds a secret to the .env.local file unless the key is already defined. This
-# allows us to add new default values even if a `.env.local` file alrady exists
+# allows us to add new default values even if a `.env.local` file already exists
 define_secret() {
   local secret_name=$1
   local secret_value=$2
